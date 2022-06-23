@@ -66,15 +66,10 @@ namespace primeiroPrograma
             cliente.Nome = "Alef";
             cliente.Cpf = "46565465450";
             cliente.Rg = "658745874";
-            //cliente.Endereco.Rua = "Rua das Garças";
-            //ContaBancaria contaBancaria = new ContaBancaria(cliente, 1234, 3000.00);
-            //ContaBancaria contaBancaria = new ContaPoupanca(cliente, 1234, 3000.00);
+            
             ContaPoupanca poupanca = new ContaPoupanca(cliente, 1234, 10.000);
             Console.WriteLine("Poupanca: " + poupanca.Titular.Nome);
-            //Console.WriteLine(contaBancaria.Titular.Nome);
-
-            //contaBancaria.Deposita(1000.00);
-
+           
             ContaCorrente corrente = new ContaCorrente(cliente, 1234, 10.000);
             Console.WriteLine("Taxa da conta corrente R$ " + corrente.Taxa() + " reais por ano");
 
