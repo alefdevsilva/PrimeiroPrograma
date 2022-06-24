@@ -9,5 +9,6 @@ namespace PrimeiroPrograma
     public interface IContaCorrente
     {
         public void RegrasContaCorrente();
+        public void Sacar(double valorDeSaque);
     }
 }
