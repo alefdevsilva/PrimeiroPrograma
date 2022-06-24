@@ -8,8 +8,10 @@ namespace primeiroPrograma
     {
         public static void Main(string[] args)
         {
-            Investimento();
 
+
+            Sacar();
+            Investimento();
             Cliente cliente = new Cliente();
             cliente.Nome = "Alef";
             cliente.Cpf = "46565465450";
