@@ -8,10 +8,9 @@ namespace primeiroPrograma
     {
         public static void Main(string[] args)
         {
-
-
             Sacar();
             Investimento();
+            Depositar();
             Cliente cliente = new Cliente();
             cliente.Nome = "Alef";
             cliente.Cpf = "46565465450";
@@ -22,7 +21,6 @@ namespace primeiroPrograma
            
             ContaCorrente corrente = new ContaCorrente(cliente, 1234, 10.000);
             Console.WriteLine("Taxa da conta corrente R$ " + corrente.Taxa() + " reais por ano");
-         
         }
         static void Sacar()
         {
