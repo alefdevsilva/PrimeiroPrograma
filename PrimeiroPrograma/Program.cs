@@ -12,6 +12,7 @@ namespace primeiroPrograma
 
             Sacar();
             Investimento();
+            Calculadora('+');
             Cliente cliente = new Cliente();
             cliente.Nome = "Alef";
             cliente.Cpf = "46565465450";
