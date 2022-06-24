@@ -8,7 +8,7 @@ namespace primeiroPrograma
     {
         public static void Main(string[] args)
         {
-            
+
 
             //ESTRUTURAS DE CONTROLE
 
@@ -21,6 +21,7 @@ namespace primeiroPrograma
             //ESTRUTURAS DE REPETIÇÃO
 
             //Investimento();
+            Sacar();
 
             Cliente cliente = new Cliente();
             cliente.Nome = "Alef";
