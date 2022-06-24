@@ -10,19 +10,8 @@ namespace primeiroPrograma
         {
 
 
-            //ESTRUTURAS DE CONTROLE
-
-            //double valorSaque = 10.0;
-            //Sacar();
-            //Depositar();
-            //Console.WriteLine("Digite a operacao que deseja executar: ");
-            //char operacao = char.Parse(Console.ReadLine());
-            //Calculadora(operacao);
-            //ESTRUTURAS DE REPETIÇÃO
-
-            //Investimento();
-            Investimento();
             Sacar();
+            Investimento();
             Cliente cliente = new Cliente();
             cliente.Nome = "Alef";
             cliente.Cpf = "46565465450";
