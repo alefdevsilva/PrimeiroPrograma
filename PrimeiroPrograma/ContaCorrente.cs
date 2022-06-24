@@ -13,6 +13,24 @@ namespace PrimeiroPrograma
         }
         public double TaxaCorrente { get; set; }
 
+        public double consultaSaldo()
+        {
+            return this.Saldo;
+        }
+
+        public void Depositar(double valorDposito)
+        {
+            if (valorDposito > 0)
+            {
+                this.Saldo += valorDposito;
+                Console.WriteLine("Deposito realizado com sucesso! \n\nSaldo atual é de: " + this.Saldo);
+            }
+            else if (valorDposito == 0)
+            {
+                Console.WriteLine("Voce nao pode depositar o valor: " + valorDposito);
+            }
+        }
+
         public void RegrasContaCorrente()
         {
             throw new NotImplementedException();

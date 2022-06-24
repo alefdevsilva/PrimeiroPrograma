@@ -8,6 +8,10 @@ namespace PrimeiroPrograma
 {
     public interface IContaPoupanca
     {
-        public string RegraPoupanca();
+        public void Sacar(double valorDoSaque);
+        public void Depositar(double valorDposito);
+        public void Investimento();
+        public double consultaSaldo();
+
     }
 }

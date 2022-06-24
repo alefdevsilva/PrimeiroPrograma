@@ -8,7 +8,8 @@ namespace PrimeiroPrograma
 {
     public interface IContaCorrente
     {
-        public void RegrasContaCorrente();
-        public void Sacar(double valorDeSaque);
+        public void Sacar(double valorDoSaque);
+        public void Depositar(double valorDposito);
+        public double consultaSaldo();
     }
 }
