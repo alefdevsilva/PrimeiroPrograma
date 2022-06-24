@@ -10,6 +10,7 @@ namespace primeiroPrograma
         {
             Sacar();
             Investimento();
+            Calculadora('+');
             Depositar();
             Cliente cliente = new Cliente();
             cliente.Nome = "Alef";
