@@ -8,18 +8,20 @@ namespace primeiroPrograma
     {
         public static void Main(string[] args)
         {
-            Sacar();
-            Investimento();
-            Depositar();
             Cliente cliente = new Cliente();
             cliente.Nome = "Alef";
             cliente.Cpf = "46565465450";
             cliente.Rg = "658745874";
             
-            ContaPoupanca poupanca = new ContaPoupanca(cliente, 1234, 10.000);
-            Console.WriteLine("Poupanca: " + poupanca.Titular.Nome);
+            //ContaPoupanca poupanca = new ContaPoupanca(cliente, 1234, 10.000);
+            //Console.WriteLine("Poupanca: " + poupanca.Titular.Nome);
            
-            ContaCorrente corrente = new ContaCorrente(cliente, 1234, 10.000);
+            ContaCorrente corrente = new ContaCorrente(cliente, 1234, 10000);
+
+            Console.WriteLine("Digite o valor a ser sacado");
+            double valorSaque = double.Parse(Console.ReadLine());
+            corrente.Sacar(valorSaque);
+
             Console.WriteLine("Taxa da conta corrente R$ " + corrente.Taxa() + " reais por ano");
         }
         static void Sacar()
