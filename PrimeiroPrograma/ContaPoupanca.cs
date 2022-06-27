@@ -26,11 +26,6 @@ namespace PrimeiroPrograma
             }
         }
 
-        public string RegraPoupanca()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Sacar(double valorDoSaque)
         {
             if (this.Saldo >= valorDoSaque)
@@ -52,11 +47,6 @@ namespace PrimeiroPrograma
                 valorInvestido = valorInvestido + 1; //* 1.01;
             }
             Console.WriteLine("Valor investido agora é " + valorInvestido);
-        }
-
-        public override double Taxa()
-        {
-            throw new NotImplementedException();
         }
 
         public double consultaSaldo()

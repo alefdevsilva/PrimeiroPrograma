@@ -18,15 +18,5 @@ namespace PrimeiroPrograma
             NumeroDaconta = numeroDaconta;
             Saldo = saldo;
         }
-
-        public void Deposita(double saldo)
-        {
-            Saldo += saldo;
-            Console.WriteLine("Saldo Atual é de " + Saldo);
-        }
-
-        public abstract double Taxa();
-        
-
     }
 }
