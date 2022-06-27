@@ -11,11 +11,23 @@ namespace PrimeiroPrograma
         public ContaCorrente(Cliente Titular, int numeroDaconta, double saldo) : base(Titular, numeroDaconta, saldo)
         {
         }
-        public double TaxaCorrente { get; set; }
 
-        public void RegrasContaCorrente()
+        public double consultaSaldo()
         {
-            throw new NotImplementedException();
+            return this.Saldo;
+        }
+
+        public void Depositar(double valorDposito)
+        {
+            if (valorDposito > 0)
+            {
+                this.Saldo += valorDposito;
+                Console.WriteLine("Deposito realizado com sucesso! \n\nSaldo atual é de: " + this.Saldo);
+            }
+            else
+            {
+                Console.WriteLine("Voce nao pode depositar o valor: " + valorDposito);
+            }
         }
 
         public void Sacar(double valorDeSaque)
@@ -30,15 +42,6 @@ namespace PrimeiroPrograma
             {
                 Console.WriteLine("Saldo Insuficiente!\n\nSaldo atual é de: " + this.Saldo);
             }
-        }
-
-        public override double Taxa()
-        {
-            for (int i = 1; i <= 12; i++)
-            {
-                TaxaCorrente = TaxaCorrente + 1;
-            }
-            return TaxaCorrente;
         }
     }
 }
