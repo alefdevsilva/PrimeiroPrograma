@@ -31,6 +31,8 @@ namespace primeiroPrograma
 
             while (true)
             {
+                Cliente cliente;
+                Endereco endereco;
                 Console.WriteLine("Escolha o tipo de conta:\n1 - Conta Corrente\n2 - Conta Poupança\n3 - para sair");
                 int opcao = int.Parse(Console.ReadLine());
                 if (opcao == 3)
@@ -45,7 +47,20 @@ namespace primeiroPrograma
                     string rg = Console.ReadLine();
                     Console.WriteLine("digite seu CPF:");
                     string cpf = Console.ReadLine();
-                    Cliente cliente = new Cliente(nome, rg, cpf);
+                    Console.WriteLine("digite o seu endereço(rua):");
+                    string rua = Console.ReadLine();
+                    Console.WriteLine("digite o número:");
+                    string numero = Console.ReadLine();
+                    Console.WriteLine("digite o CEP:");
+                    string cep = Console.ReadLine();
+                    Console.WriteLine("digite o nome do seu pais:");
+                    string pais = Console.ReadLine();
+                    Console.WriteLine("digite o nome do seu bairro:");
+                    string bairro = Console.ReadLine();
+                    Console.WriteLine("digite o nome da sua cidade:");
+                    string cidade = Console.ReadLine();
+                    endereco = new Endereco(rua, numero, cep, bairro, cidade, pais);
+                    cliente = new Cliente(nome, rg, cpf, endereco);
                     Console.WriteLine("digite seu saldo inicial:");
                     double saldo = double.Parse(Console.ReadLine());
                     ContaCorrente corrente = new ContaCorrente(cliente, 1234, saldo);
@@ -101,7 +116,20 @@ namespace primeiroPrograma
                     string rg = Console.ReadLine();
                     Console.WriteLine("digite seu CPF:");
                     string cpf = Console.ReadLine();
-                    Cliente cliente = new Cliente(nome, rg, cpf);
+                    Console.WriteLine("digite o seu endereço(rua):");
+                    string rua = Console.ReadLine();
+                    Console.WriteLine("digite o número:");
+                    string numero = Console.ReadLine();
+                    Console.WriteLine("digite o CEP:");
+                    string cep = Console.ReadLine();
+                    Console.WriteLine("digite o nome do seu pais:");
+                    string pais = Console.ReadLine();
+                    Console.WriteLine("digite o nome do seu bairro:");
+                    string bairro = Console.ReadLine();
+                    Console.WriteLine("digite o nome da sua cidade:");
+                    string cidade = Console.ReadLine();
+                    endereco = new Endereco(rua, numero, cep, bairro, cidade, pais);
+                    cliente = new Cliente(nome, rg, cpf, endereco);
                     Console.WriteLine("digite seu saldo inicial:");
                     double saldo = double.Parse(Console.ReadLine());
                     ContaPoupanca poupanca = new ContaPoupanca(cliente, 1234, saldo);
