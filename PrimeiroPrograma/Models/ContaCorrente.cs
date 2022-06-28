@@ -1,10 +1,11 @@
-﻿using System;
+﻿using PrimeiroPrograma.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrimeiroPrograma
+namespace PrimeiroPrograma.Models
 {
     public class ContaCorrente : ContaBancaria, IContaCorrente
     {
@@ -14,15 +15,15 @@ namespace PrimeiroPrograma
 
         public double consultaSaldo()
         {
-            return this.Saldo;
+            return Saldo;
         }
 
         public void Depositar(double valorDposito)
         {
             if (valorDposito > 0)
             {
-                this.Saldo += valorDposito;
-                Console.WriteLine("Deposito realizado com sucesso! \n\nSaldo atual é de: " + this.Saldo);
+                Saldo += valorDposito;
+                Console.WriteLine("Deposito realizado com sucesso! \n\nSaldo atual é de: " + Saldo);
             }
             else
             {
@@ -32,15 +33,15 @@ namespace PrimeiroPrograma
 
         public void Sacar(double valorDeSaque)
         {
-            
-            if (this.Saldo >= valorDeSaque)
+            this.Saldo -= 1;
+            if (Saldo >= valorDeSaque)
             {
-                this.Saldo = this.Saldo - valorDeSaque;
-                Console.WriteLine("Saque realizado com sucesso! \n\nSaldo atual é de: " + this.Saldo);
+                Saldo = Saldo - valorDeSaque;
+                Console.WriteLine("Saque realizado com sucesso! \n\nSaldo atual é de: " + Saldo);
             }
             else
             {
-                Console.WriteLine("Saldo Insuficiente!\n\nSaldo atual é de: " + this.Saldo);
+                Console.WriteLine("Saldo Insuficiente!\n\nSaldo atual é de: " + Saldo);
             }
         }
     }

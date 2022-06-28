@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrimeiroPrograma
+namespace PrimeiroPrograma.Models
 {
     public class Endereco
     {
