@@ -1,10 +1,11 @@
-﻿using System;
+﻿using PrimeiroPrograma.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrimeiroPrograma
+namespace PrimeiroPrograma.Models
 {
     public class ContaPoupanca : ContaBancaria, IContaPoupanca
     {
@@ -17,8 +18,8 @@ namespace PrimeiroPrograma
         {
             if (valorDposito > 0)
             {
-                this.Saldo += valorDposito;
-                Console.WriteLine("Deposito realizado com sucesso! \n\nSaldo atual é de: " + this.Saldo);
+                Saldo += valorDposito;
+                Console.WriteLine("Deposito realizado com sucesso! \n\nSaldo atual é de: " + Saldo);
             }
             else if (valorDposito == 0)
             {
@@ -28,14 +29,14 @@ namespace PrimeiroPrograma
 
         public void Sacar(double valorDoSaque)
         {
-            if (this.Saldo >= valorDoSaque)
+            if (Saldo >= valorDoSaque)
             {
-                this.Saldo = this.Saldo - valorDoSaque;
-                Console.WriteLine("Saque realizado com sucesso! \n\nSaldo atual é de: " + this.Saldo);
+                Saldo = Saldo - valorDoSaque;
+                Console.WriteLine("Saque realizado com sucesso! \n\nSaldo atual é de: " + Saldo);
             }
             else
             {
-                Console.WriteLine("Saldo Insuficiente!\n\nSaldo atual é de: " + this.Saldo);
+                Console.WriteLine("Saldo Insuficiente!\n\nSaldo atual é de: " + Saldo);
             }
         }
 
@@ -51,7 +52,7 @@ namespace PrimeiroPrograma
 
         public double consultaSaldo()
         {
-            return this.Saldo;
+            return Saldo;
         }
     }
 }
