@@ -110,6 +110,7 @@ namespace primeiroPrograma
                     double saldo = double.Parse(Console.ReadLine());
                     ContaPoupanca poupanca = new ContaPoupanca(cliente, 1234, saldo);
                     Console.WriteLine("sua conta foi criada com sucesso!");
+
                     while (true)
                     {
                         Console.WriteLine("Deseja fazer alguma operação?\n1 - sacar\n2-depositar\n3 - ver saldo\n4- sair");
