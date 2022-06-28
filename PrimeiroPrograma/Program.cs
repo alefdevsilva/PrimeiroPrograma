@@ -65,7 +65,7 @@ namespace primeiroPrograma
                             else
                             {
                                 continue;
-                            }
+                            }   
                         }
                         else if (escolha == 2)
                         {
